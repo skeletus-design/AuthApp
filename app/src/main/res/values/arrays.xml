@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="countries">
+        <item>🇷🇺 Россия (+7)</item>
+        <item>🇺🇸 США (+1)</item>
+        <item>🇬🇧 Великобритания (+44)</item>
+    </string-array>
+    <string-array name="flags_array" />
+</resources>
