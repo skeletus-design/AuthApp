@@ -1,11 +1,14 @@
 package com.example.vshpauth
 
 import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.EditText
 import android.widget.Spinner
+import android.widget.TextView
 import com.redmadrobot.inputmask.MaskedTextChangedListener
 import com.redmadrobot.inputmask.MaskedTextChangedListener.Companion.installOn
 
@@ -86,5 +89,13 @@ class RegistrationActivity : Activity() {
         // Обновляем hint с примером номера
         phoneInput.hint = "${country.example}"
         phoneInput.text?.clear()
+    }
+
+    fun onTextViewClick(view: View) {
+        if (view is TextView) {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 }

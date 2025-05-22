@@ -219,6 +219,14 @@ class MainActivity : Activity() {
                 .getString("auth_token", null)
         }
     }
+
+    fun onTextViewClick(view: View) {
+        if (view is TextView) {
+            val intent = Intent(this, RegistrationActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+    }
 }
 
 @Composable

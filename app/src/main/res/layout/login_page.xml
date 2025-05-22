@@ -30,7 +30,7 @@
 
             <TextView
                 android:id="@+id/textView2"
-                android:layout_width="134dp"
+                android:layout_width="wrap_content"
                 android:layout_height="28dp"
                 android:layout_marginStart="32dp"
                 android:layout_marginEnd="301dp"
@@ -58,15 +58,15 @@
     <TextView
         android:id="@+id/textView"
         android:layout_width="248dp"
-        android:layout_height="105dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="200dp"
         android:layout_marginBottom="8dp"
+        android:fontFamily="@font/microsoftsansserif"
         android:text="Авторизация в образовательном комплексе ВШП"
         android:textAlignment="center"
         android:textSize="24sp"
-        android:textStyle="bold"
 
-        android:fontFamily="@font/microsoftsansserif"
+        android:textStyle="bold"
 
         app:layout_constraintBottom_toTopOf="@+id/editTextText"
         app:layout_constraintEnd_toEndOf="parent"
@@ -77,15 +77,15 @@
 
     <EditText
         android:id="@+id/editTextText"
-        android:layout_width="266dp"
+        android:layout_width="290dp"
         android:layout_height="45dp"
         android:layout_marginTop="264dp"
         android:ems="10"
+        android:fontFamily="@font/microsoftsansserif"
         android:hint="Введите почту или телефон"
         android:inputType="text"
-        android:textAlignment="center"
 
-        android:fontFamily="@font/microsoftsansserif"
+        android:textAlignment="center"
 
 
         app:layout_constraintBottom_toBottomOf="parent"
@@ -97,15 +97,15 @@
 
     <EditText
         android:id="@+id/editTextText2"
-        android:layout_width="266dp"
+        android:layout_width="288dp"
         android:layout_height="45dp"
         android:layout_marginTop="16dp"
         android:ems="10"
+        android:fontFamily="@font/microsoftsansserif"
         android:hint="Введите пароль"
         android:inputType="text"
-        android:textAlignment="center"
 
-        android:fontFamily="@font/microsoftsansserif"
+        android:textAlignment="center"
 
 
         app:layout_constraintBottom_toBottomOf="parent"
@@ -135,7 +135,7 @@
 
     <TextView
         android:id="@+id/registrationLink"
-        android:layout_width="272dp"
+        android:layout_width="wrap_content"
         android:layout_height="44dp"
         android:layout_marginTop="8dp"
         android:autoLink="all"
