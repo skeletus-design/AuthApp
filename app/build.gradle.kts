@@ -54,6 +54,11 @@ dependencies {
     implementation(libs.material)
     implementation(libs.redmadrobotinputmask)
     implementation(libs.kotlinstdlib)
+    implementation(libs.retrofit)
+    implementation(libs.converter)
+    implementation(libs.viewmodel)
+    implementation(libs.runtime)
+    implementation(libs.glide)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
