@@ -46,8 +46,10 @@ class HomeActivity : Activity() {
 
         // Настройка кнопки меню
         findViewById<ImageButton>(R.id.menuButton).setOnClickListener {
-            drawerLayout.openDrawer(Gravity.START)
+            drawerLayout.openDrawer(Gravity.LEFT)
         }
+
+
 
         // Инициализация элементов в NavigationView
         val navView = findViewById<NavigationView>(R.id.nav_view)
@@ -60,10 +62,13 @@ class HomeActivity : Activity() {
         val navUnreadMessages = navHeader.findViewById<TextView>(R.id.nav_unreadMessagesText)
         val navLogoutButton = navHeader.findViewById<Button>(R.id.nav_logoutButton)
 
-        // Установка данных пользователя
-        navUserName.text = user.fullName
-        navUserEmail.text = user.email
-        navUnreadMessages.text = "Непрочитанных сообщений: ${user.unreadMessages}"
+        if (navUserName == null || navUserEmail == null || navUnreadMessages == null) {
+            showToast("Ошибка: элементы шапки не найдены")
+        } else {
+            navUserName.text = user.fullName
+            navUserEmail.text = user.email
+            navUnreadMessages.text = "Непрочитанных сообщений: ${user.unreadMessages}"
+        }
 
         // Загрузка аватара
         user.photo?.avatar?.let { avatarUrl ->
