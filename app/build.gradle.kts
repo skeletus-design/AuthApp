@@ -59,6 +59,7 @@ dependencies {
     implementation(libs.viewmodel)
     implementation(libs.runtime)
     implementation(libs.glide)
+    implementation(libs.material)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
