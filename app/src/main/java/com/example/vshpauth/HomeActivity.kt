@@ -59,15 +59,15 @@ class HomeActivity : Activity() {
         val navAvatar = navHeader.findViewById<ImageView>(R.id.nav_avatarImage)
         val navUserName = navHeader.findViewById<TextView>(R.id.nav_userNameText)
         val navUserEmail = navHeader.findViewById<TextView>(R.id.nav_userEmailText)
-        val navUnreadMessages = navHeader.findViewById<TextView>(R.id.nav_unreadMessagesText)
+//        val navUnreadMessages = navHeader.findViewById<TextView>(R.id.nav_unreadMessagesText)
         val navLogoutButton = navHeader.findViewById<Button>(R.id.nav_logoutButton)
 
-        if (navUserName == null || navUserEmail == null || navUnreadMessages == null) {
+        if (navUserName == null || navUserEmail == null) {
             showToast("Ошибка: элементы шапки не найдены")
         } else {
             navUserName.text = user.fullName
             navUserEmail.text = user.email
-            navUnreadMessages.text = "Непрочитанных сообщений: ${user.unreadMessages}"
+//            navUnreadMessages.text = "Непрочитанных сообщений: ${user.unreadMessages}"
         }
 
         // Загрузка аватара

@@ -22,7 +22,7 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#751515"
+                android:background="#8d282e"
                 android:minHeight="?attr/actionBarSize"
                 android:theme="?attr/actionBarTheme"
                 tools:layout_editor_absoluteX="16dp"
@@ -93,43 +93,51 @@
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
         app:layout_constraintVertical_bias="0.131" />
 
-    <EditText
-        android:id="@+id/editTextText2"
-        android:layout_width="288dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:fontFamily="@font/microsoftsansserif"
-        android:hint="Введите пароль"
-        android:inputType="text"
-
-        android:textAlignment="center"
-
-
-        app:layout_constraintBottom_toBottomOf="parent"
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextText">
+
+        <EditText
+            android:id="@+id/editTextText2"
+            android:layout_width="241dp"
+            android:layout_height="45dp"
+
+            android:ems="10"
+            android:fontFamily="@font/microsoftsansserif"
+            android:hint="Введите пароль"
+            android:inputType="text"
+            android:textAlignment="center" />
+
+        <ImageButton
+            android:id="@+id/HideButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:scaleType="fitCenter"
+            android:src="@drawable/hide" />
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/button"
         android:layout_width="185dp"
         android:layout_height="54dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/roundedbutton"
+        android:fontFamily="@font/microsoftsansserif"
         android:text="Войти"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
-
-        android:fontFamily="@font/microsoftsansserif"
-
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText2"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
     <TextView
         android:id="@+id/registrationLink"

@@ -5,9 +5,11 @@ import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
+import android.text.InputType
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
 import androidx.compose.material3.Text
@@ -25,6 +27,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.Body
 import retrofit2.http.POST
+import android.text.method.PasswordTransformationMethod
 
 class MainActivity : Activity() {
 
@@ -107,6 +110,34 @@ class MainActivity : Activity() {
                 performLogin(login, password)
             } else {
                 showToast("Введите логин и пароль")
+            }
+        }
+
+        // Кнопка экранирования пароля
+        val imageButton = findViewById<ImageButton>(R.id.HideButton)
+
+        // Картинки глаза
+        val image1 = R.drawable.eye
+        val image2 = R.drawable.hide
+        var currentImage = image2
+
+        // Инпут пароля
+        val passwordEdit: EditText = findViewById<EditText>(R.id.editTextText2)
+        passwordEdit.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
+        passwordEdit.transformationMethod = PasswordTransformationMethod()
+
+        imageButton.setOnClickListener {
+            // Меняем изображение и состояние
+            if (currentImage == image1) {
+                imageButton.setImageResource(R.drawable.hide)
+                passwordEdit.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
+                passwordEdit.transformationMethod = PasswordTransformationMethod()
+                currentImage = image2
+            } else {
+                imageButton.setImageResource(R.drawable.eye)
+                passwordEdit.inputType = InputType.TYPE_CLASS_TEXT
+                passwordEdit.transformationMethod = null
+                currentImage = image1
             }
         }
 
