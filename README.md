@@ -14,11 +14,13 @@
 2. Обеспечить постоянную авторизацию и базовый функционал приложения
 3. Создать временный токен авторизации
 
+## Последний [релиз](https://github.com/skeletus-design/AuthApp/releases/tag/now3)
+
 ## Примеры реализованных запросов к API
 
 1. Авторизация на my.vshp.online
 
-Пример пустого тела заброса
+Пример пустого тела запроса:
 ```
 {
 
@@ -64,5 +66,29 @@
     "locale": "ru"
   },
   "token": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyNjU5LCJleHAiOjE2OTcwNDMzOTZ9.Ia1LDa3EnWN2qRQAB_3V8_gjTSHc553A45cbJbPVeW8"
+}
+```
+
+2. Получение шестизначного OTP кода
+
+Пример пустого тела запроса:
+```
+{
+  "method": "POST",
+  "url": "https://api.vshp.online/api/v1/user/otp",
+  "headers": {
+    "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozNzIyMzI2LCJleHAiOjE3NDk3NjIyNTIsImlhdCI6MTc0OTE1NzQ1Mn0.3Qf7lLyUHlGjsydpsU16udjjH_d8CkBnKJjFMUkRypA",
+    "Content-Type": "multipart/form-data"
+  },
+  "body": {
+    "lifetime": "300"
+  }
+}
+```
+
+Пример ответа:
+```
+{
+    "code": "190097"
 }
 ```
