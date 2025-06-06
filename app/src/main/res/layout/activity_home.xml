@@ -6,7 +6,8 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeActivity">
+    tools:context=".HomeActivity"
+    android:background="@color/white">
 
     <!-- Основной контент -->
     <LinearLayout
@@ -51,17 +52,94 @@
         </com.google.android.material.appbar.AppBarLayout>
 
             <!-- Основной контент будет здесь -->
-            <LinearLayout
-                android:layout_width="match_parent"
+        <LinearLayout
+            android:id="@+id/labels"
+            android:layout_width="match_parent"
+            android:layout_height="363dp"
+            android:orientation="vertical"
+            android:paddingVertical="10dp">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/relict" />
+
+            <TextView
+                android:id="@+id/welcomeLabel"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-            </LinearLayout>
+                android:layout_gravity="center_horizontal"
+                android:padding="10dp"
+                android:text="Добро пожаловать!"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="#403333"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/descriptionLabel"
+                android:layout_width="358dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="10dp"
+                android:text="Данное приложение необходимо для временной OTP авторизации на сервисах платформы ВШП. Срок действия кода 1 минута."
+                android:textAlignment="center"
+                android:textColor="#998080"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_otp"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/otp_code"
+            android:text="Запросите код!"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/timer_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:text="Время до конца действия кода"
+            android:textColor="@android:color/darker_gray"/>
+
+        <!-- Поле для ввода времени жизни кода -->
+        <Button
+            android:id="@+id/button_send_otp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/roundedbutton"
+            android:onClick="sendOtpRequest"
+            android:text="Получить код" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            tools:visibility="gone" />
 
         <FrameLayout
             android:id="@+id/content_frame"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
     </LinearLayout>
+
+
 
     <!-- Боковое меню -->
     <com.google.android.material.navigation.NavigationView

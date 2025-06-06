@@ -60,6 +60,8 @@ dependencies {
     implementation(libs.runtime)
     implementation(libs.glide)
     implementation(libs.material)
+    implementation(libs.filament.android)
+    implementation(libs.websocket)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
