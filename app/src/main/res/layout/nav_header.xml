@@ -29,6 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
+            android:fontFamily="@font/microsoftsansserif"
             android:gravity="center"
             android:textColor="@android:color/black"
             android:textSize="18sp"
@@ -40,6 +41,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
+            android:fontFamily="@font/microsoftsansserif"
             android:gravity="center"
             android:textColor="#808080"
             android:textSize="14sp"
@@ -62,6 +64,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="16dp"
             android:backgroundTint="#F44336"
+            android:fontFamily="@font/microsoftsansserif"
             android:paddingHorizontal="32dp"
             android:text="Выйти"
             android:textColor="@android:color/white"
@@ -80,8 +83,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginStart="20dp"
-            android:textSize="18sp"
-            android:text="Ваша прошлая сессия длилась: 90 минут">
+            android:fontFamily="@font/microsoftsansserif"
+            android:text="Ваша прошлая сессия длилась: 90 минут"
+            android:textSize="18sp">
 
         </TextView>
 

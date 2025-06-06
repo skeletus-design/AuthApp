@@ -71,6 +71,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/microsoftsansserif"
                 android:padding="10dp"
                 android:text="Добро пожаловать!"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -83,6 +84,7 @@
                 android:layout_width="358dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/microsoftsansserif"
                 android:padding="10dp"
                 android:text="Данное приложение необходимо для временной OTP авторизации на сервисах платформы ВШП. Срок действия кода 1 минута."
                 android:textAlignment="center"
@@ -94,10 +96,11 @@
         <TextView
             android:id="@+id/tv_otp"
             android:layout_width="wrap_content"
-            android:layout_gravity="center_horizontal"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
             android:background="@drawable/otp_code"
+            android:fontFamily="@font/microsoftsansserif"
             android:text="Запросите код!"
             android:textAlignment="center"
             android:textColor="@android:color/black"
@@ -108,10 +111,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:textSize="16sp"
-            android:textAlignment="center"
+            android:fontFamily="@font/microsoftsansserif"
             android:text="Время до конца действия кода"
-            android:textColor="@android:color/darker_gray"/>
+            android:textAlignment="center"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="16sp" />
 
         <!-- Поле для ввода времени жизни кода -->
         <Button
@@ -119,10 +123,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:padding="15dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/roundedbutton"
+            android:fontFamily="@font/microsoftsansserif"
             android:onClick="sendOtpRequest"
+            android:padding="15dp"
             android:text="Получить код" />
 
         <ProgressBar
