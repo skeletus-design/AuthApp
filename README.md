@@ -16,6 +16,10 @@
 
 ## Последний [релиз](https://github.com/skeletus-design/AuthApp/releases/tag/now3)
 
+## Схема взаимодействия элементов системы
+
+![Схема](https://github.com/skeletus-design/AuthApp/blob/master/mermaid-diagram-2025-06-09-125300.png?raw=true)
+
 ## Примеры реализованных запросов к API
 
 1. Авторизация на my.vshp.online
