@@ -26,17 +26,16 @@
 
 Пример пустого тела запроса:
 ```
+'json'
 {
-
     "login": "jane.doe@vshp.online",
-
     "password": "some_pass123"
-
 }
 ```
 
 Пример ответа
 ```
+'json'
 {
   "user": {
     "id": 2659,
@@ -77,6 +76,7 @@
 
 Пример пустого тела запроса:
 ```
+'json'
 {
   "method": "POST",
   "url": "https://api.vshp.online/api/v1/user/otp",
@@ -92,6 +92,7 @@
 
 Пример ответа:
 ```
+'json'
 {
     "code": "190097"
 }
